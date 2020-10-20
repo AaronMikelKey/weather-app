@@ -1,30 +1,36 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Weather App</title>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
-        <link rel="stylesheet" href="./styles.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css" integrity="sha512-Fdq8QvrEd3TD4heN8gNTOl79sAZR7zsiHIDQbE5eEBxx8pPfb/yJHaBWxhoG7SNcQiBmrrUHlg5TiNX4ovt6Jg==" crossorigin="anonymous" />
-    </head>
-    <body>
-        <div id="app">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css"
+        integrity="sha512-Fdq8QvrEd3TD4heN8gNTOl79sAZR7zsiHIDQbE5eEBxx8pPfb/yJHaBWxhoG7SNcQiBmrrUHlg5TiNX4ovt6Jg=="
+        crossorigin="anonymous" />
+</head>
+
+<body>
+    <div id="app">
+        <div>
             <div class="card">
                 <div class="card-content">
-                  <p class="title">
-                    Weather today in: 
-                    <input id='city' class="input is-medium" type="text" value="Charlotte">
-                    <button id="search" class="button">
-                        <span class="icon">
-                            <i class="fas fa-search"></i>
-                        </span>
-                    </button>
-                  </p>
+                    <p class="title">
+                        Current weather in: <br />
+                        <input id='city' class="input is-medium" type="text" value="Charlotte">
+                        <button id="searchButton" class="button">
+                            <span class="icon">
+                                <i class="fas fa-search"></i>
+                            </span>
+                        </button>
+                    </p>
                 </div>
-              </div>
-              <div class="card">
+            </div>
+            <div class="card" id="current">
                 <div class="card-component" id="weather">
+                    <div id="time"></div>
                     <div id="weatherStatus"></div>
                     <div id="temperature"></div>
                     <div id="wind">
@@ -32,9 +38,11 @@
                         <span id="windDirection"></span>
                     </div>
                 </div>
-              </div>
+            </div>
         </div>
-    </body>
-    <script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
-    <script src="./scripts.js"></script>
+    </div>
+</body>
+<script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
+<script type="module" src="./scripts.js"></script>
+
 </html>
