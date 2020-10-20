@@ -1,5 +1,9 @@
+import keys from './config';
+const myKey = keys.myKey;
+
 let city = document.getElementById('city').value;
-const apiCall = 'https://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=5929c2bed7052947ef72a623c4f08aa3'
+const apiCall = 'https://api.openweathermap.org/data/2.5/weather?q=' + city + '&' + myKey;
+
 
 const weatherStatus = document.getElementById('weatherStatus');
 const temperature = document.getElementById('temperature');
